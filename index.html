@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Únete a nuestro equipo - Postulación</title>
+    <link rel="stylesheet" href="form.css">
+   <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Contenedor principal estilo Blog -->
+    <div class="blog-container">
+        <h1>Únete a nuestro equipo</h1>
+        <p style="text-align: center; color: #777; margin-top: -20px; margin-bottom: 30px;">Estamos buscando talento. Completa tus datos y postúlate a nuestras vacantes.</p>
+
+        <!-- Se añade enctype para permitir la subida de archivos (el CV) -->
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <!-- Datos personales básicos -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana" required />
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ej. Gómez" required />
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" />
+
+            <!-- Perfil profesional -->
+            <h2>Perfil Profesional</h2>
+            
+            <label for="linkedin">Perfil de LinkedIn o Portafolio:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/tuperfil" />
+
+            <!-- Subida de Archivo (Currículum) -->
+            <label for="cv">Sube tu Currículum (PDF):</label>
+            <input type="file" id="cv" name="cv" accept=".pdf" />
+
+            <!-- Selección de vacante -->
+            <h2>Vacante de interés</h2>
+            <label for="opciones">Puesto al que aplicas:</label>
+            <select id="opciones" name="vacante" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="frontend">Chef de donas</option>
+                <option value="backend">Desarrollador/a de la pagina web</option>
+                <option value="diseno">Ayudante a supervisor</option>
+                <option value="practicante">Repartidor de donas</option>
+                <option value="soporte">Vendedor de donas</option>
+            </select>
+
+            <!-- Preferencias de Trabajo -->
+            <h2>Modalidad de trabajo preferida</h2>
+            <fieldset>
+                <legend>Opciones:</legend>
+                <input type="checkbox" id="mod_remoto" name="modalidad" value="remoto" />
+                <label for="mod_remoto">100% Remoto</label>
+
+                <input type="checkbox" id="mod_hibrido" name="modalidad" value="hibrido" />
+                <label for="mod_hibrido">Híbrido</label>
+
+                <input type="checkbox" id="mod_presencial" name="modalidad" value="presencial" />
+                <label for="mod_presencial">Presencial</label>
+            </fieldset>
+
+            <!-- Carta de presentación -->
+            <h2>Sobre ti</h2>
+            <label for="comentarios">Carta de presentación:</label>
+            <textarea id="comentarios" name="comentarios" rows="5" placeholder="Cuéntanos por qué te gustaría trabajar con nosotros y qué aportarías al equipo..."></textarea>
+
+            <!-- Botones agrupados -->
+            <div class="button-group">
+                <button type="submit">Enviar Postulación</button>
+                <button type="reset">Limpiar Formulario</button>
+            </div>
+        </form>
+
+        <hr />
+        <p style="text-align: center; font-size: 0.85em; color: #999;">Revisaremos tu perfil cuidadosamente y nos pondremos en contacto contigo.</p>
+    </div>
+</body>
+
+</html>
